@@ -12,6 +12,15 @@ public class Bird extends Pet
         this.wingspan = wingspan;
     }
 
+    public String speak()
+    {
+        if(this.species.equalsIgnoreCase("Snowy Owl"))
+        {
+            return "screech";
+        }
+        return "chirp";
+    }
+
     public String toString()
     {
         String output = super.toString() + "\nSpecies: " + species;

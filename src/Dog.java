@@ -8,6 +8,15 @@ public class Dog extends Pet
         this.breed = breed;
     }//end of dog constructor
 
+    public String speak()
+    {
+        if (this.age < 1)
+        {
+          return "yip";
+        }
+        return "bark";
+    }
+
     public String toString()
     {
 

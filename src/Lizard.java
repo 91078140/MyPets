@@ -8,6 +8,11 @@ public class Lizard extends Pet
         this.species = species;
     }//end of Lizard constructor
 
+    public String speak()
+    {
+        return "hiss";
+    }
+
     public String toString()
     {
         String output = super.toString() + "\nSpecies: " + species;

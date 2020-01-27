@@ -1,15 +1,32 @@
 public abstract class Pet
 {
-    private String name;
-    private int age;
-    private double weight;// in kg
+    protected String name;
+    protected int age;
+    protected double weight;// in kg
 
     public Pet (String name, int age, double weight)
     {
         this.name = name;
         this.age = age;
         this.weight = weight;
-    }
+    }// end of pet constructor
+
+    public String getName()
+    {
+        return name;
+    }// end name getter
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }// end of name setter
+
+    abstract public String speak();// to override child classes
+
+    public double kgToPounds()
+    {
+        return weight * 2.205;
+    }// end of conversion method
 
     public String toString()
     {
@@ -17,5 +34,5 @@ public abstract class Pet
         output += "\nAge: " + age;
         output += "\nWeight: " + weight + " kg";
         return output;
-    }
-}
+    }// end of parent toString
+}//end of pet class
